@@ -1,0 +1,145 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    div.text {
+        background-color: rgb(59, 102, 0);
+        padding: 6px 8px;
+        text-align: center;
+    }
+
+    div.text strong {
+        color: #ffcc48;
+    }
+
+    div.items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.item {
+        width: 23%;
+        margin: 1%;
+        padding: 4px;
+        background-color: rgb(253, 217, 10);
+        border: 2px solid gray;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    div.item div {
+        overflow: hidden;
+    }
+
+    div.item img {
+        width: 100%;
+        transition: transform ease-in 1s;
+        border-radius: 12px;
+    }
+
+    div.item img:hover {
+        transform: scale(1.2);
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    div.item .label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: gray;
+        color: white;
+        font-size: 20px;
+        padding: 8px;
+        border-radius: 0 10px;
+        animation: changeColor ease 1s infinite ;
+    }
+    @keyframes changeColor {
+        20% {background-color: green;}
+        60% {background-color: rgb(187, 121, 0)}
+        80% {background-color: rgb(35, 4, 119);}
+    }
+
+    div.item p {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    a.nav-item {
+        padding: 0 20px;
+        border-right: 2px solid rgb(190, 190, 190);
+    }
+
+    @media screen and (max-width: 300px) and (orientation: landscape)  {
+        div.item {
+            width: 100%;
+            font-size: 20px;
+        }
+        div.test p {
+            color:rgb(187, 121, 0)
+        }
+    }
+
+    @media screen and (min-width: 301px) and (max-width: 600px) {
+        div.item {
+            width: 48%;
+            font-size: 16px;
+        }
+    }
+
+    @media only screen 
+        and (min-width: 601px) 
+        and (max-width: 1370px)
+        and (orientation: landscape) {
+            div.item {
+                width: 31.2%;
+                font-size: 28px;
+            }
+            a.nav-link {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .nav-item {
+                padding: 0 8px;
+            }
+            div.item p {
+                color: rgb(105, 76, 1)
+            }
+        }
+
+    @media only screen
+        and (min-width: 768px) 
+        and (max-width: 1024px) 
+        and (orientation: portrait) {
+            a.nav-link {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .nav-item {
+                padding: 0 8px;
+            }
+
+            div.item p {
+                color: rgb(0, 110, 0)
+            }  
+        }
+
+    @media screen and (min-width: 1024px) {
+        div.item {
+            width: 23%;
+            font-size: 26px;
+        }
+        a.nav-link {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-item {
+            padding: 0 20px;
+        }
+    }
+
+    
